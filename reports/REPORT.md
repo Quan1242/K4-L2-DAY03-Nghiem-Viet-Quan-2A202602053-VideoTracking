@@ -13,7 +13,7 @@ Ngày: 2026-09-15
 | Thời gian gán `clip_02` (warm-up) | 0 |
 | Thời gian gán `clip_01` | 240 phút |
 | Số track đã vẽ trong `clip_01` | 8 |
-| Số keyframe trung bình mỗi track | CHƯA TÍNH |
+| Số keyframe trung bình mỗi track | 54.6 (437 keyframe thủ công / 8 track) |
 
 Annotation dùng một label `vehicle`, Rectangle → Track, không thêm attribute. `clip_01`
 có 190 frame, 617 bbox và 8 track.
