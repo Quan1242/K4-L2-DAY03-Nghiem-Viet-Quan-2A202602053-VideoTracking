@@ -130,7 +130,7 @@ reload, export MOT, validator, ba lượt QC, peer review, rồi mới khóa pre
 - [x] `annotations/clip_01/gt.txt`
 - [ ] `annotations/clip_02/gt.txt` — chưa kiểm tra/cập nhật
 - [x] `evidence/pre-gold/clip_01/gt.txt` và `manifest.json`
-- [ ] `GUIDELINE_MINI.md` đã điền
+- [x] `GUIDELINE_MINI.md` đã điền
 - [x] `outputs/eval_vs_gold.json`
 - [x] `outputs/eval_pre_gold.json`
 - [x] `outputs/model_bytetrack_clip_01.txt`
