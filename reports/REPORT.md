@@ -10,8 +10,8 @@ Ngày: 2026-09-15
 | Mục | Giá trị |
 | --- | --- |
 | Công cụ | CVAT local |
-| Thời gian gán `clip_02` (warm-up) | CHƯA GHI |
-| Thời gian gán `clip_01` | CHƯA GHI |
+| Thời gian gán `clip_02` (warm-up) | 0 |
+| Thời gian gán `clip_01` | 240 phút |
 | Số track đã vẽ trong `clip_01` | 8 |
 | Số keyframe trung bình mỗi track | CHƯA TÍNH |
 
@@ -50,18 +50,20 @@ CHƯA GHI SAU PEER REVIEW.
 | | HOTA | DetA | AssA | LocA | IDF1 | MOTA | MOTP | FP | FN | IDSW |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | Bản pre-gold | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ |
-| Sau rework / nhãn bạn vs gold | 0.7852 | 0.7610 | 0.8113 | 0.8719 | 0.9378 | 0.8709 | 0.8587 | 59 | 15 | 0 |
+| Bản pre-gold / nhãn bạn vs gold | 0.7852 | 0.7610 | 0.8113 | 0.8719 | 0.9378 | 0.8709 | 0.8587 | 59 | 15 | 0 |
+| Sau rework | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ | CHƯA CÓ |
 
 Qua cổng (`IDF1 >= 0.80`, `MOTA >= 0.75`, `MOTP >= 0.70`): **có**.
 
-Các diagnostics chính: không có missed track hoặc fragmented GT track; có ghost/biên track ở
-ID 4, 5, 6, 8 và một số bbox lỏng, nổi bật ở ID 5 quanh frame 80–108.
+Các diagnostics chính của pre-gold: không có missed track hoặc fragmented GT track; có
+ghost/biên track ở ID 4, 5, 6, 8 và một số bbox lỏng, nổi bật ở ID 5 quanh frame 80–108.
+Chưa có bản export sau rework nên chưa thể báo chênh lệch trước/sau.
 
 | Loại lỗi | Frame | ID | Đã sửa thế nào |
 | --- | ---: | ---: | --- |
-| Bbox IoU thấp | 80–108 | 5 | CHƯA GHI rework |
-| Ghost trước/sau thời gian tham chiếu | 51–53, 149–151 | 4 | CHƯA GHI rework |
-| Ghost trước thời gian tham chiếu | 75–79 | 5, 6 | CHƯA GHI rework |
+| Bbox IoU thấp | 80–108 | 5 | Chưa rework |
+| Ghost trước/sau thời gian tham chiếu | 51–53, 149–151 | 4 | Chưa rework |
+| Ghost trước thời gian tham chiếu | 75–79 | 5, 6 | Chưa rework |
 
 ## 4. Kết quả model: ByteTrack control vs ReID treatment
 
@@ -130,6 +132,7 @@ reload, export MOT, validator, ba lượt QC, peer review, rồi mới khóa pre
 - [x] `evidence/pre-gold/clip_01/gt.txt` và `manifest.json`
 - [ ] `GUIDELINE_MINI.md` đã điền
 - [x] `outputs/eval_vs_gold.json`
+- [x] `outputs/eval_pre_gold.json`
 - [x] `outputs/model_bytetrack_clip_01.txt`
 - [x] `outputs/model_reid_clip_01.txt`
 - [x] `outputs/model_run_config.json`
